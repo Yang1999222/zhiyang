@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Route } from 'next';
 import Link from 'next/link';
 import './globals.css';
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: '硬件/电子工程师风格个人博客，分享嵌入式、PCB 与工程实践。'
 };
 
-const navItems = [
+const navItems: { href: Route; label: string }[] = [
   { href: '/', label: '首页' },
   { href: '/blog', label: '博客' },
   { href: '/tags', label: '标签' },
